@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 　　<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css"> <!-- 外部スタイルシート -->
-    <title>楽しく生きろ</title>
+    <title>to DO</title>
     
   　　　
     
@@ -110,18 +110,20 @@
 
         <!-- FI -->
         <div class="form-group">
-            <label for="time">FI:</label>
+            <label for="time">toDO :</label>
             <div class="d-flex">
                 <select id="time" class="form-control me-2" onchange="updateTime(this.value)">
                     <option value="Time">Time</option>
                     <option value="1W">1W</option>
                     <option value="1D">1D</option>
                     <option value="4H">4H</option>
+                    <option value="1H">1H</option>
                 </select>
                 <select id="block" class="form-control" onchange="updateBlock(this.value)">
                     <option value="Block">Block</option>
                     <option value="Cont.">Cont.</option>
                     <option value="CrK.">CrK.</option>
+                    <option value="TFC.">TFC.</option>
                 </select>
             </div>
   
@@ -135,30 +137,36 @@
                     <option value="1D">1D</option>
                     <option value="4H">4H</option>
                     <option value="1H">1H</option>
+                    <option value="15m">15m</option>
                 </select>
                 <select id="b2blk" class="form-control" onchange="updateB2blk(this.value)">
                     <option value="Block">Block</option>
                     <option value="SSB">SSB</option>
                     <option value="Cont.">Cont.</option>
                     <option value="CrK.">CrK.</option>
+                    <option value="P&T">P&T</option>
                 </select>
             </div>
         </div>
 
 <!-- todo_FI -->
 <div class="form-group">
-    <label for="todo_time">FI2:</label>
+    <label for="todo_time">toDO II:</label>
     <div class="d-flex">
         <select id="todo_time" class="form-control me-2" onchange="updatetodo_Time(this.value)">
             <option value="Time">Time</option>
-            <option value="1W">1W</option>
             <option value="1D">1D</option>
             <option value="4H">4H</option>
+            <option value="1H">1H</option>
+            <option value="15m">15m</option>
+
         </select>
         <select id="todo_block" class="form-control" onchange="updatetodo_Block(this.value)">
             <option value="Block">Block</option>
             <option value="Cont.">Cont.</option>
             <option value="CrK.">CrK.</option>
+            <option value="SSB">SSB</option>
+            <option value="TFC.">TFC.</option>
         </select>
     </div>
 
@@ -172,10 +180,13 @@
             <option value="1D">1D</option>
             <option value="4H">4H</option>
             <option value="1H">1H</option>
+            <option value="15m">15m</option>
+            <option value="3m">3m</option>
         </select>
         <select id="todo_b2blk" class="form-control" onchange="updatetodo_B2blk(this.value)">
             <option value="Block">Block</option>
             <option value="SSB">SSB</option>
+            <option value="Saw">Saw</option>
             <option value="Cont.">Cont.</option>
             <option value="CrK.">CrK.</option>
         </select>
