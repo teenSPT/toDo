@@ -164,12 +164,12 @@ function executeSelection() {
     // 結果表示のための情報を構築
     const resultInfo = `
         ${selectedTime !== defaultValues.time ? selectedTime : ''} ${selectedBlock !== defaultValues.block ? selectedBlock : ''} 
-        ${selectedB2tm !== defaultValues.b2tm ? selectedB2tm : ''} ${selectedB2blk !== defaultValues.b2blk ? selectedB2blk : ''} / <br>
+        ${selectedB2tm !== defaultValues.b2tm ? selectedB2tm : ''} ${selectedB2blk !== defaultValues.b2blk ? selectedB2blk : ''} <br>
         
-        ${selectedtodo_Time !== defaultValues.todo_time ? selectedtodo_Time : ''} ${selectedtodo_Block !== defaultValues.todo_block ? selectedtodo_Block : ''} <br>
+        ${selectedtodo_Time !== defaultValues.todo_time ? selectedtodo_Time : ''} ${selectedtodo_Block !== defaultValues.todo_block ? selectedtodo_Block : ''} 
         ${selectedtodo_B2tm !== defaultValues.todo_b2tm ? selectedtodo_B2tm : ''} ${selectedtodo_B2blk !== defaultValues.todo_b2blk ? selectedtodo_B2blk : ''} <br>
        
-        ${selectedC1tm !== defaultValues.c1tm ? selectedC1tm : ''} ${selectedC1nc !== defaultValues.c1nc ? selectedC1nc : ''} / <br>
+        ...${selectedC1tm !== defaultValues.c1tm ? selectedC1tm : ''} ${selectedC1nc !== defaultValues.c1nc ? selectedC1nc : ''} <br>
         
         ${selectedTicker !== defaultValues.ticker ? selectedTicker : ''}: 
         ${selectedBroker !== defaultValues.broker ? selectedBroker : ''} Spread: ${spread}
@@ -178,8 +178,6 @@ function executeSelection() {
     // 空白を削除して表示
     resultDiv.innerHTML = resultInfo.replace(/\s+/g, ' ').trim();
 }
-
-
 
 //倉庫　
 /*　TFC: ${selectedTfc !== defaultValues.tfc ? selectedTfc : ''} / <br>　
@@ -190,7 +188,7 @@ function executeSelection() {
 
 */
 
-　　　　
+
 
 function copyInfo() {
     const resultDiv = document.getElementById('result');
